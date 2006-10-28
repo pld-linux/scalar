@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Scallar
+Comment=Addictive puzzle game to kill time
+Comment[pl]=Uzależniająca gra logiczna, która pomaga zabić czas
+Icon=scalar.png
+Exec=scalar
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Game;LogicGame;
+# vi: encoding=utf-8
