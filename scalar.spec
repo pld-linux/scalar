@@ -40,7 +40,7 @@ sed -i 's@data@%{_datadir}/%{name}/data@' %{name}.cpp
 %build
 %{__make} \
 	CXX="%{__cxx}" \
-	CXXFLAGS="%{rpmcflags}"
+	CXXFLAGS="%{rpmcxxflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
