@@ -6,7 +6,7 @@ Summary:	Addictive puzzle game to kill time
 Summary(pl):	Uzale¿niaj±ca gra logiczna, która pomaga zabiæ czas
 Name:		scalar
 Version:	1.02
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/scalar/%{name}-%{version}-src.tar.bz2
@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/scalar/%{name}-%{version}-src.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-images_dir.patch
+Patch1:		%{name}-Makefile.patch
 URL:		http://scalar.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
@@ -33,12 +34,13 @@ przywrócenie oryginalnego wygl±du obrazka.
 %prep
 %setup -q -n %{name}-%{version}-src
 %patch0 -p1
+%patch1 -p0
 sed -i 's@data@%{_datadir}/%{name}/data@' %{name}.cpp
 
 %build
 %{__make} \
 	CXX="%{__cxx}" \
-	OPTIMIZE="%{rpmcflags}"
+	CXXFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
