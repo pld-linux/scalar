@@ -1,0 +1,18 @@
+--- Makefile	2004-10-07 09:19:18.000000000 +0200
++++ Makefile-new	2006-10-28 16:31:04.000000000 +0200
+@@ -26,13 +26,14 @@
+ PROGRAM = scalar
+ OBJECTS = scalar.o hiscore.o njamfont.o njamutils.o
+ CC = g++
++CXXFLAGS=
+ 
+ # If you hate warnings under Cygwin use these flags instead
+ # MY_CFLAGS = -I/usr/local/include/SDL -Dmain=SDL_main -DWIN32 -Uunix -mno-cygwin
+ MY_CFLAGS = `sdl-config --cflags`
+ 
+ %.o:	%.cpp
+-	$(CC) -O3 -c $(MY_CFLAGS) $< -o $@
++	$(CC) $(CXXFLAGS) -c $(MY_CFLAGS) $< -o $@
+ 
+ all:	$(PROGRAM)
+ 
