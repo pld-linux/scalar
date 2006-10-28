@@ -1,0 +1,29 @@
+--- scalar-1.02-src/scalar.cpp~	2006-10-28 15:20:52.000000000 +0200
++++ scalar-1.02-src/scalar.cpp	2006-10-28 15:22:25.000000000 +0200
+@@ -571,7 +571,7 @@
+ {
+ 	// open folder with images
+ 	DIR *dir;
+-	if ((dir = opendir("images")) == NULL)
++	if ((dir = opendir("/usr/share/scalar/images")) == NULL)
+ 	{
+ 		printf("Unable to open image directory.\n");
+ 		return false;
+@@ -618,7 +618,7 @@
+ 
+ 	// open folder with images
+ 	DIR *dir;
+-	if ((dir = opendir("images")) == NULL)
++	if ((dir = opendir("/usr/share/scalar/images")) == NULL)
+ 	{
+ 		printf("Unable to open image directory.\n");
+ 		return false;
+@@ -634,7 +634,7 @@
+ 		if (c == m_ImageToPlay[current_level])
+ 		{
+ 			char buffer[2000];
+-			sprintf(buffer, "%s/%s", "images", ent->d_name);
++			sprintf(buffer, "%s/%s", "/usr/share/scalar/images", ent->d_name);
+ 			if (!NjamLoad(&m_PuzzleImage, buffer))
+ 				m_PuzzleImage = 0;
+ 			break;
