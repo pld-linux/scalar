@@ -28,7 +28,7 @@ each piece back to its original position.
 
 %description -l pl
 Celem gry jest u³o¿enie obrazka z kawa³ków. Ka¿dy obrazek zosta³
-podzielony na kawa³ki, które zosta³y pomieszane. Twoim zadaniem jest
+podzielony na kawa³ki, które zosta³y pomieszane. Zadaniem gracza jest
 przywrócenie oryginalnego wygl±du obrazka.
 
 %prep
@@ -49,8 +49,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_desktopdir},%{_pixm
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-cp -r data/ $RPM_BUILD_ROOT%{_datadir}/%{name}
-cp -r images/ $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r data $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r images $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
