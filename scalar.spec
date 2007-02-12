@@ -3,7 +3,7 @@
 %bcond_without	SDL_mixer	# build without SDL_mixer
 #
 Summary:	Addictive puzzle game to kill time
-Summary(pl.UTF-8):   Uzależniająca gra logiczna, która pomaga zabić czas
+Summary(pl.UTF-8):	Uzależniająca gra logiczna, która pomaga zabić czas
 Name:		scalar
 Version:	1.02
 Release:	2
