@@ -3,7 +3,7 @@
 %bcond_without	SDL_mixer	# build without SDL_mixer
 #
 Summary:	Addictive puzzle game to kill time
-Summary(pl):	Uzaleøniaj±ca gra logiczna, ktÛra pomaga zabiÊ czas
+Summary(pl.UTF-8):   Uzale≈ºniajƒÖca gra logiczna, kt√≥ra pomaga zabiƒá czas
 Name:		scalar
 Version:	1.02
 Release:	2
@@ -26,10 +26,10 @@ The goal of the game is to assemble the picture from pieces. Each
 picture is divided into pieces which are shuffled. You need to get
 each piece back to its original position.
 
-%description -l pl
-Celem gry jest u≥oøenie obrazka z kawa≥kÛw. Kaødy obrazek zosta≥
-podzielony na kawa≥ki, ktÛre zosta≥y pomieszane. Zadaniem gracza jest
-przywrÛcenie oryginalnego wygl±du obrazka.
+%description -l pl.UTF-8
+Celem gry jest u≈Ço≈ºenie obrazka z kawa≈Çk√≥w. Ka≈ºdy obrazek zosta≈Ç
+podzielony na kawa≈Çki, kt√≥re zosta≈Çy pomieszane. Zadaniem gracza jest
+przywr√≥cenie oryginalnego wyglƒÖdu obrazka.
 
 %prep
 %setup -q -n %{name}-%{version}-src
