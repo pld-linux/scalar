@@ -33,8 +33,8 @@ przywrócenie oryginalnego wyglądu obrazka.
 
 %prep
 %setup -q -n %{name}-%{version}-src
-%patch0 -p1
-%patch1 -p0
+%patch -P0 -p1
+%patch -P1 -p0
 sed -i 's@data@%{_datadir}/%{name}/data@' %{name}.cpp
 
 %build
